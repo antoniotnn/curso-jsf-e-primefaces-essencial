@@ -16,6 +16,63 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	
+	<dependencies>
+		<dependency>
+			<groupId>org.glassfish</groupId>  <!-- JSF -->
+			<artifactId>javax.faces</artifactId>
+			<version>2.2.13</version>
+			<scope>compile</scope> <!-- indica que no empacotamento final do projeto a dependência deve ser incluída -->
+		</dependency>
+		
+		<dependency>
+			<groupId>org.primefaces</groupId> <!-- Primefaces -->
+			<artifactId>primefaces</artifactId>
+			<version>6.0</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope> <!-- para NÃO incluir a dependência no empacotamento final, pois o tomcat já possui a api de servlet-->
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId> <!-- Dependências de validação. Pode ser usada sem a dependência de persistência -->
+			<version>5.3.0.Final</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId> <!-- Dependência de persistência. Declarando assim, o maven baixa o hibernate-core também que é uma dependência do entitymaneger -->
+			<version>5.2.3.Final</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>  <!-- Mysql -->
+			<artifactId>mysql-connector-java</artifactId>
+			<version>6.0.4</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	
+	<!--  
+	Se declarado aqui dessa forma, o maven tentará achar e baixar as dependências no repositório central do maven na Web, e caso não consiga,
+	tentará buscar em outro local, declarado em baixo, que pode ser a máquina local ou um servidor interno, ou na web, etc.
+		
+	<repositories>
+		<repository>
+			<id></id>
+			<name></name>
+			<url></url>
+		</repository>
+	</repositories>
+	-->
+	
 	<build>
 		<plugins>
 			<plugin>
