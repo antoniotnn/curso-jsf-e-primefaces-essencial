@@ -47,7 +47,7 @@
 		
 		<dependency>
 			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId> <!-- Dependência de persistência. Declarando assim, o maven baixa o hibernate-core também que é uma dependência do entitymaneger -->
+			<artifactId>hibernate-core</artifactId> <!-- Dependência de persistência. antes declarada como hibernate-entitymanager porém o core já absorveu o código dele hje em dia. -->
 			<version>5.2.3.Final</version>
 			<scope>compile</scope>
 		</dependency>
