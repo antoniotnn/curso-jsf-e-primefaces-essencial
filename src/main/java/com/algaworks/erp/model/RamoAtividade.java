@@ -2,6 +2,7 @@ package com.algaworks.erp.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,6 +20,7 @@ public class RamoAtividade implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // serve para o Hibernate delegar ao banco de dados, no caso o MySQL a missão de  controlar a sequencia de IDS, e que não seja necessário inserir manualmente os IDS
 	private Long id;
 	
+	@Column(nullable = false, length = 80)
 	private String descricao;
 
 	public Long getId() {
