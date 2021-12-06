@@ -95,6 +95,7 @@ public class Empresa implements Serializable {
 		this.ramoAtividade = ramoAtividade;
 	}
 
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -123,6 +124,14 @@ public class Empresa implements Serializable {
 	@Override
 	public String toString() {
 		return "Empresa [id=" + id + "]";
+	}
+
+	public TipoEmpresa getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoEmpresa tipo) {
+		this.tipo = tipo;
 	}
 	
 	
