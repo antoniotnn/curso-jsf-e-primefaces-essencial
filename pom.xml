@@ -26,9 +26,9 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>org.glassfish</groupId>  <!-- JSF -->
+			<groupId>org.glassfish</groupId>  <!-- JSF , já tendo a especificação que é a JSF quanto a implementação Mojarra-->
 			<artifactId>javax.faces</artifactId>
-			<version>2.2.13</version>
+			<version>2.2.14</version>
 			<scope>compile</scope> <!-- indica que no empacotamento final do projeto a dependência deve ser incluída -->
 		</dependency>
 		
@@ -40,23 +40,23 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>javax.servlet</groupId>
+			<groupId>javax.servlet</groupId> <!-- API de Servlet necessária para o JSF -->
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
+			<version>3.1.0</version>
 			<scope>provided</scope> <!-- para NÃO incluir a dependência no empacotamento final, pois o tomcat já possui a api de servlet-->
 		</dependency>
 		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId> <!-- Dependências de validação. Pode ser usada sem a dependência de persistência -->
-			<version>5.3.0.Final</version>
+			<version>5.3.2.Final</version>
 			<scope>compile</scope>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId> <!-- Dependência de persistência. antes declarada como hibernate-entitymanager porém o core já absorveu o código dele hje em dia. -->
-			<version>5.2.3.Final</version>
+			<version>5.2.4.Final</version>
 			<scope>compile</scope>
 		</dependency>
 		
