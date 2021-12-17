@@ -26,6 +26,7 @@ public class GestaoEmpresasBean implements Serializable {
 	}
 	
 	public String ajuda() {
+		System.out.println("Chegamos até aqui");
 		return "AjudaGestaoEmpresas?faces-redirect=true";
 	}
 	
