@@ -3,21 +3,28 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
-  
-  <display-name>curso-jsf-e-primefaces-essencial</display-name>
-  
-  <welcome-file-list>
-  	<welcome-file>GestaoEmpresas.xhtml</welcome-file>
-  </welcome-file-list>
+
+	<display-name>curso-jsf-e-primefaces-essencial</display-name>
+
+	<welcome-file-list>
+		<welcome-file>GestaoEmpresas.xhtml</welcome-file>
+	</welcome-file-list>
+	
+	<context-param>
+		<param-name>primefaces.FONT_AWESOME</param-name>
+		<param-value>true</param-value>
+	</context-param>
 
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
-		<param-value>Development</param-value><!-- Production, para produção e assim não mostrar pro user final msgs de erro extensas -->
+		<param-value>Development</param-value><!-- Production, para produção e 
+			assim não mostrar pro user final msgs de erro extensas -->
 	</context-param>
 
 	<context-param>
 		<param-name>javax.faces.FACELETS_REFRESH_PERIOD</param-name>
-		<param-value>0</param-value><!-- Setado em 0 em Dev, para não gerar cache dos templates -->
+		<param-value>0</param-value><!-- Setado em 0 em Dev, para não gerar cache 
+			dos templates -->
 	</context-param>
 
 	<resource-env-ref>
@@ -39,5 +46,5 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
-	
+
 </web-app>
